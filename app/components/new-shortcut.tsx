@@ -14,7 +14,7 @@ export default function NewPost({
   const [status, setStatus] = useState<string | null>(null);
 
   async function submitNewShortcut() {
-    setStatus(null); // Clear previous status
+    setStatus(null);
 
     try {
       const success = await createFunc(alias, url);
@@ -23,9 +23,9 @@ export default function NewPost({
         setAlias("");
         setUrl("");
       }
-    } catch (error: any) {
-      // Display the error message returned by the backend
-      setStatus(error.message || "Something went wrong.");
+    } catch (error) {
+
+      setStatus("Something went wrong.");
     }
   }
   return (
@@ -35,7 +35,7 @@ export default function NewPost({
           <h1 className="text-2xl font-bold text-green-600">{status}</h1>
           <button
             className="mt-4 text-blue-600 underline hover:text-blue-800"
-            onClick={() => setStatus(null)} // Reset status to show the form again
+            onClick={() => setStatus(null)}
           >
             Create another shortcut
           </button>

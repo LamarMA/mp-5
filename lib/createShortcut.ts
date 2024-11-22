@@ -23,7 +23,7 @@ function isValid(url: string) {
 
       req.on("error", () => resolve(false));
       req.end();
-    } catch (err) {
+    } catch {
       resolve(false);
     }
   });
