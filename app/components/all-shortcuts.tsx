@@ -3,10 +3,10 @@
 
 // jeffery code
 import { useState } from "react";
-import { ShortcutProps } from "@/app/types"; // Define ShortcutProps in your app/types
-import NewShortcut from "./new-shortcut"; // Component for creating new shortcuts
-import { createShortcut } from "@/lib/createShortcut"; // Function for adding a new shortcut
-import ShortcutPreview from "./shortcut-preview";
+import { ShortcutProps } from "@/app/types";
+import NewShortcut from "./new-shortcut";
+import { createShortcut } from "@/lib/createShortcut"; 
+// import ShortcutPreview from "./shortcut-preview";
 
 export default function DisplayAllShortcuts({
   inputShortcuts,

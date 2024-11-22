@@ -28,8 +28,6 @@ export default function NewPost({
       setStatus(error.message || "Something went wrong.");
     }
   }
-
-
   return (
     <div className="w-full flex flex-col items-center">
       {status && status.includes("successfully") ? (

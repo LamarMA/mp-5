@@ -1,6 +1,5 @@
 // lib/shortcuts.ts
 import getCollection, { COLLECTION } from "@/db";
-import clientPromise from "@/db"
 import { ShortcutProps } from "@/app/types";
 
 
@@ -8,7 +7,6 @@ import { ShortcutProps } from "@/app/types";
 export default async function getShortcutByAlias(
   alias: string,
 ): Promise<ShortcutProps | null> {
-  const client = await clientPromise;
   const shortcutsCollection = await getCollection(COLLECTION);
 
   // Find the shortcut by alias

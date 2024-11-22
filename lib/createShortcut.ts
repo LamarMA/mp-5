@@ -5,7 +5,7 @@ import https from "https";
 
 // lab7
 function isValid(url: string) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     try {
       const req = https.get(url, (res) => {
 
