@@ -23,10 +23,13 @@ export default function NewPost({
         setAlias("");
         setUrl("");
       }
-    } catch (error: any) {
-
-      // trying to get the error to show up
-      setStatus(error.toString() || "Something went wrong.");
+    } catch (error: unknown) {
+      // type of error is giving my issues
+      if (error instanceof Error) {
+        setStatus(error.message);
+      } else {
+        setStatus("Something went wrong."); // fallback error message
+      }
     }
   }
   return (
