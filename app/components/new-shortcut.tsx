@@ -23,9 +23,10 @@ export default function NewPost({
         setAlias("");
         setUrl("");
       }
-    } catch {
+    } catch (error: any) {
 
-      setStatus("Something went wrong.");
+      // trying to get the error to show up
+      setStatus(error.toString() || "Something went wrong.");
     }
   }
   return (

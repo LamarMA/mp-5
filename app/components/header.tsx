@@ -10,7 +10,6 @@ export default function Header() {
       <h2 className="text-4x1 font-semibold p-4"> MP-5</h2>
       <nav className="p-2 m-4">
         <Link href="/" className={linkStyling}>Home</Link>
-        <Link href="/about" className={linkStyling}>About</Link>
       </nav>
     </header>
   );
