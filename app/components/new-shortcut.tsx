@@ -23,7 +23,7 @@ export default function NewPost({
         setAlias("");
         setUrl("");
       }
-    } catch (error) {
+    } catch {
 
       setStatus("Something went wrong.");
     }
