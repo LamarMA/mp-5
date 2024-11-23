@@ -37,16 +37,10 @@ export default function NewPost({
       {status && status.includes("successfully") ? (
         <div className="text-center">
           <h1 className="text-2xl font-bold text-green-600">{status}</h1>
-          <button
-            className="mt-4 text-blue-600 underline hover:text-blue-800"
-            onClick={() => setStatus(null)}
-          >
-            Create another shortcut
-          </button>
         </div>
       ) : (
         <form
-          className="w-96 rounded-x1 p-4 bg-sky-300"
+          className="w-96 rounded-x1 p-4 bg-[#C78283]"
           onSubmit={(e) => {
             e.preventDefault();
             submitNewShortcut();
